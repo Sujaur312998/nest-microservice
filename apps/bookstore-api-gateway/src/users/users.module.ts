@@ -4,18 +4,18 @@ import { UsersController } from './users.controller';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
-  imports:[
+  imports: [
     ClientsModule.register([
       {
         name: 'USERS_CLIENT',
         transport: Transport.TCP,
         options: {
-          port: 3001
-        }
-      }
-    ])
+          port: 3001,
+        },
+      },
+    ]),
   ],
   providers: [UsersService],
-  controllers: [UsersController]
+  controllers: [UsersController],
 })
 export class UsersModule {}

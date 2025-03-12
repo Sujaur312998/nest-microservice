@@ -10,12 +10,12 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
         name: 'BOOK_CLIENT',
         transport: Transport.TCP,
         options: {
-          port: 3002
-        }
-      }
-    ])
+          port: 3002,
+        },
+      },
+    ]),
   ],
   controllers: [BooksController],
   providers: [BooksService],
 })
-export class BooksModule { }
+export class BooksModule {}

@@ -6,12 +6,12 @@ async function bootstrap() {
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(
     BooksAppModule,
     {
-      transport:Transport.TCP,
-      options:{
-        port:3002
-      }
-    }
-  )
+      transport: Transport.TCP,
+      options: {
+        port: 3002,
+      },
+    },
+  );
   await app.listen();
 }
 bootstrap();
